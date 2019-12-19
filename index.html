@@ -285,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.caca.ltd/2019/08/28/00-组件版本和配置策略/">
+    <link itemprop="mainEntityOfPage" href="http://www.caca.ltd/2019/12/19/发布jar到中央仓库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ajoe">
@@ -304,7 +304,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/08/28/00-组件版本和配置策略/" itemprop="url">00.组件版本和配置策略</a></h1>
+                <a class="post-title-link" href="/2019/12/19/发布jar到中央仓库/" itemprop="url">发布jar到中央仓库</a></h1>
         
 
         <div class="post-meta">
@@ -316,199 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-28T17:40:52+08:00">
-                2019-08-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/个人网站/" itemprop="url" rel="index">
-                    <span itemprop="name">个人网站</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/个人网站/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-
-
-组件版本
-主要配置策略
-
-
-
-组件版本
-Kubernetes 1.14.2
-Docker 18.09.6-ce
-Etcd 3.3.13
-Flanneld 0.11.0
-插件：
-Coredns
-Dashboard
-Metrics-server
-EFK (elasticsearch、fluentd、kibana)
-
-
-镜像仓库：
-docker registry
-harbor
-
-
-
-主要配置策略kube-apiserver：
-
-使用节点本地 nginx 4 层透明代理实现高可用；
-关闭非安全端口 8080 和匿名访问；
-在安全端口 6443 接收 https 请求；
-严格的认证和授权策略 (x509、token、RBAC)；
-开启 bootstrap token 认证，支持 kubelet 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/28/00-组件版本和配置策略/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.caca.ltd/2019/08/28/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ajoe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://oss.aliyuncs.com/aliyun_id_photo_bucket/account-console-aliyun-com/87893689_qq_com156704016750967347.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CACA">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/28/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-28T17:30:42+08:00">
-                2019-08-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-19T09:50:44+08:00">
+                2019-12-19
               </time>
             
 
@@ -547,18 +356,23 @@ harbor
       
         
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
+          maven发布jar到中央仓库一、注册JIRA帐号​        地址：https://issues.sonatype.org/secure/Dashboard.jspa
+​        注意：密码需要至少8位，同时有大小写字母，特殊字符和数字
+二、创建issue
 
-More info: Writing
-Run server1$ hexo server
 
-More info: Server
-Generate static files1$ hexo generate
+
+三、等待审核
+域名问题，需要groupId的域名部分属于自己的域名，在这里使用com.github.duojin
+根据一系列对话的指引解决所有问题，地址https://issues.sonatype.org/browse/OSSRH-53957
+
+
+
+四、gpg 环境安装gpg的主要作用是生成密钥对，会用于后续我们组件发布的校验。1、下载地址： https://www.gnupg.org/download/,   安装时
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/08/28/hello-world/#more" rel="contents">
+            <a class="btn" href="/2019/12/19/发布jar到中央仓库/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -644,32 +458,14 @@ Generate static files1$ hexo generate
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
             
 
           </nav>
