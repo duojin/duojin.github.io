@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Ajoe的个人博客，主要涉及到编程（Java，Linux等），个人提升学习">
+<meta name="description" content="on windows os port proxy setting在windows上做系统开发时，有时会有端口转发的需求 简洁配置如下  添加端口映射 1netsh interface portproxy add v4tov4 listenaddress=192.168.xxx.xxx listenport=6379 connectaddress=192.168.yyy.yyy connectpor">
 <meta name="keywords" content="Ajoe Java,Linux">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CACA">
-<meta property="og:url" content="http://www.caca.ltd/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="on windows os port proxy setting">
+<meta property="og:url" content="http://www.caca.ltd/2019/12/30/on-windows-os-port-proxy-setting/index.html">
 <meta property="og:site_name" content="CACA">
-<meta property="og:description" content="Ajoe的个人博客，主要涉及到编程（Java，Linux等），个人提升学习">
+<meta property="og:description" content="on windows os port proxy setting在windows上做系统开发时，有时会有端口转发的需求 简洁配置如下  添加端口映射 1netsh interface portproxy add v4tov4 listenaddress=192.168.xxx.xxx listenport=6379 connectaddress=192.168.yyy.yyy connectpor">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-30T01:45:12.574Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CACA">
-<meta name="twitter:description" content="Ajoe的个人博客，主要涉及到编程（Java，Linux等），个人提升学习">
+<meta name="twitter:title" content="on windows os port proxy setting">
+<meta name="twitter:description" content="on windows os port proxy setting在windows上做系统开发时，有时会有端口转发的需求 简洁配置如下  添加端口映射 1netsh interface portproxy add v4tov4 listenaddress=192.168.xxx.xxx listenport=6379 connectaddress=192.168.yyy.yyy connectpor">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://www.caca.ltd/">
+  <link rel="canonical" href="http://www.caca.ltd/2019/12/30/on-windows-os-port-proxy-setting/">
 
 
 
 
 
-  <title>CACA</title>
+  <title>on windows os port proxy setting | CACA</title>
   
 
 
@@ -144,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,9 +270,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -302,9 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/30/on-windows-os-port-proxy-setting/" itemprop="url">on windows os port proxy setting</a></h1>
+          <h1 class="post-title" itemprop="name headline">on windows os port proxy setting</h1>
         
 
         <div class="post-meta">
@@ -354,29 +352,26 @@
       
 
       
-        
-          
-          on windows os port proxy setting在windows上做系统开发时，有时会有端口转发的需求
-简洁配置如下
+        <h1 id="on-windows-os-port-proxy-setting"><a href="#on-windows-os-port-proxy-setting" class="headerlink" title="on windows os port proxy setting"></a>on windows os port proxy setting</h1><p>在windows上做系统开发时，有时会有端口转发的需求</p>
+<p>简洁配置如下</p>
+<ul>
+<li><p>添加端口映射</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenaddress=192.168.xxx.xxx listenport=6379 connectaddress=192.168.yyy.yyy connectport=6379</span><br></pre></td></tr></table></figure>
 
-添加端口映射
-1netsh interface portproxy add v4tov4 listenaddress=192.168.xxx.xxx listenport=6379 connectaddress=192.168.yyy.yyy connectport=6379
+</li>
+</ul>
+<p>会把本机ip192.168.xxx.xxx，端口6379的数据请求转发到远程ip 192.168.yyy.yyy ，端口6379 上</p>
+<ul>
+<li><p>删除端口映射</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy delete v4tov4 listenaddress=192.168.xxx.xxx listenport=6379</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看端口映射</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy show all</span><br></pre></td></tr></table></figure>
 
-
-
-会把本机ip192.168.xxx.xxx，端口6379的数据请求转发到远程ip 192.168.yyy.yyy ，端口6379 上
-
-删除端口映射
-1netsh interface portproxy delete v4tov4 listenaddress=192.168.xx
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/12/30/on-windows-os-port-proxy-setting/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+</li>
+</ul>
+<p>查看更多帮助</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netsh help</span><br><span class="line">netsh interface portproxy help</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -393,150 +388,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.caca.ltd/2019/12/19/发布jar到中央仓库/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ajoe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://oss.aliyuncs.com/aliyun_id_photo_bucket/account-console-aliyun-com/87893689_qq_com156704016750967347.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CACA">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/19/发布jar到中央仓库/" itemprop="url">发布jar到中央仓库</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-19T09:50:44+08:00">
-                2019-12-19
-              </time>
+              <a href="/2019/12/19/发布jar到中央仓库/" rel="next" title="发布jar到中央仓库">
+                <i class="fa fa-chevron-left"></i> 发布jar到中央仓库
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          maven发布jar到中央仓库一、注册JIRA帐号​        地址：https://issues.sonatype.org/secure/Dashboard.jspa
-​        注意：密码需要至少8位，同时有大小写字母，特殊字符和数字
-二、创建issue
-
-
-
-三、等待审核
-域名问题，需要groupId的域名部分属于自己的域名，在这里使用com.github.duojin
-根据一系列对话的指引解决所有问题，地址https://issues.sonatype.org/browse/OSSRH-53957
-
-
-
-四、gpg 环境安装gpg的主要作用是生成密钥对，会用于后续我们组件发布的校验。1、下载地址： https://www.gnupg.org/download/,   安装时
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/12/19/发布jar到中央仓库/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -546,10 +419,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -557,6 +431,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -577,8 +455,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -638,6 +525,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#on-windows-os-port-proxy-setting"><span class="nav-number">1.</span> <span class="nav-text">on windows os port proxy setting</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -772,6 +675,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
