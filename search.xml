@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[安装zip的mysql]]></title>
+    <url>%2F2020%2F01%2F02%2F%E5%AE%89%E8%A3%85zip%E7%9A%84mysql%2F</url>
+    <content type="text"><![CDATA[安装zip的mysql环境介绍win10、mysql5.7 官网 https://dev.mysql.com/doc/refman/5.7/en/windows-install-archive.html 下载mysql安装包zip1、下载地址 ​ https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.28-winx64.zip 2、解压到指定目录D:\dev-tool\mysql-5.7.28-winx64 3、创建配置文件my.ini ​ 在安装目录下创建配置文件my.ini、内容如下 12345678910111213141516[mysql]# 设置mysql客户端默认字符集default-character-set=utf8[mysqld]#设置3306端口port = 3306# 设置mysql的安装目录basedir=D:/dev-tool/mysql-5.7.28-winx64# 设置mysql数据库的数据的存放目录datadir=D:/dev-tool/mysql-5.7.28-winx64/data# 允许最大连接数max_connections=200# 服务端使用的字符集默认为8比特编码的latin1字符集character-set-server=utf8# 创建新表时将使用的默认存储引擎default-storage-engine=INNODB 更详细的请查阅官方文档 https://dev.mysql.com/doc/refman/5.7/en/windows-create-option-file.html 4、初始化并安装mysql cd到安装目录bin下 123mysqld --initializemysqld installnet start mysql 若之前弄错了 1mysqld -remove 5、MySQL5.7在安装完后会在data目录下生产一个随机的密码，文件名为xxx.err，登录时需要用随机密码登录，然后通过以下命令修改密码 1SET PASSWORD = PASSWORD(&apos;new password&apos;);]]></content>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[on windows os port proxy setting]]></title>
     <url>%2F2019%2F12%2F30%2Fon-windows-os-port-proxy-setting%2F</url>
     <content type="text"><![CDATA[on windows os port proxy setting在windows上做系统开发时，有时会有端口转发的需求 简洁配置如下 添加端口映射 1netsh interface portproxy add v4tov4 listenaddress=192.168.xxx.xxx listenport=6379 connectaddress=192.168.yyy.yyy connectport=6379 会把本机ip192.168.xxx.xxx，端口6379的数据请求转发到远程ip 192.168.yyy.yyy ，端口6379 上 删除端口映射 1netsh interface portproxy delete v4tov4 listenaddress=192.168.xxx.xxx listenport=6379 查看端口映射 1netsh interface portproxy show all 查看更多帮助 12netsh helpnetsh interface portproxy help]]></content>
